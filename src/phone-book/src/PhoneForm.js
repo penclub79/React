@@ -2,31 +2,38 @@ import React, {Component} from 'react';
 
 class PhoneForm extends Component {
     state = {
-        name: '',
+        name:'',
         phone:''
     }
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
-        });
+        })
+    }
+    handleSubmit = (e) => {
+        e.preventDefault();
+        this.props.onCreate(this.state);
+        this.setState({
+            name:'',
+            phone:''
+        })
     }
     render() {
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <input
                     placeholder="이름"
                     value={this.state.name}
                     onChange={this.handleChange}
-                    // onChange는 input의 텍스트 값이 바뀔대마다 발생하는 이벤트이다.
+                    name="name"
                 />
                 <input
                     placeholder="전화번호"
                     value={this.state.phone}
                     onChange={this.handleChange}
                     name="phone"
-                    // onChange는 input의 텍스트 값이 바뀔대마다 발생하는 이벤트이다.
                 />
-                <div>{this.state.name} {this.state.phone}</div>
+                <button type="submit">등록</button>
             </form>
         );
     }
