@@ -5,35 +5,36 @@
 //2. 함수를 통해서 만드는것. -> 나중에 알아보자.
 //컴포넌트를 불러 올때, import하여 불러온다.
 import React, {Component} from 'react';
-import MyName from './MyName';
-import Counter from './Counter';
-import EventPractice from './EventPractice';
-
+// import MyName from './MyName';
+// import Counter from './Counter';
+// import EventPractice from './EventPractice';
+import app from './antiredux/src';
 
 class App extends Component {
 
   render() {
-    //var는 함수단위
-    //let, const는 블록단위
-    let name = '변수1'
-    const style = {
-      backgroundColor: 'black',
-      padding: '40px',
-      color: 'white',
-      fontSize: '12px'
-    };
+    // //var는 함수단위
+    // //let, const는 블록단위
+    // let name = '변수1'
+    // const style = {
+    //   backgroundColor: 'black',
+    //   padding: '40px',
+    //   color: 'white',
+    //   fontSize: '12px'
+    // };
 
     return (
-        <div style={style}>
-          <div>
-            {name}
-            <MyName name="변수2" age={555555555}/>
-            <Counter></Counter>
-          </div>
-          <div>
-          bye
-          </div>
-          <EventPractice/>
+        <div>
+        {/*<div style={style}>*/}
+          {/*<div>*/}
+          {/*  {name}*/}
+          {/*  <MyName name="변수2" age={555555555}/>*/}
+          {/*  <Counter></Counter>*/}
+          {/*</div>*/}
+          {/*<div>*/}
+          {/*bye*/}
+          {/*</div>*/}
+          {/*<EventPractice/>*/}awdawd
         </div>
     );
   }
